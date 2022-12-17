@@ -1,0 +1,75 @@
+.dot {
+    height: 13px;
+    width: 13px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(65, 210, 154);
+  }
+.logo{
+    display:grid;
+  grid-template-columns: 17px 17px;
+  grid-row: auto auto;
+  grid-column-gap: 5px;
+  grid-row-gap: 5px;
+  margin-left: 4%;
+  margin-top: 2%;
+}
+.navbutton{
+    border-radius: 0;
+    border: none;
+    background-color: white;
+    margin-right: 20px;
+    color: gray;
+    font-size: 15px;
+}
+.navbar{
+    position: absolute;
+    right: 10%;
+    margin-top: 2%;
+}
+.navigator{
+    display: flex;
+    align-items: center;
+}
+.lines{
+    margin-top: 20px;
+}
+.indilines{
+    margin-bottom: 1px;
+    margin-top: 2px;
+    background-color: rgb(84, 241, 202);
+}
+.active{
+    color: rgb(65, 210, 154);
+}
+.navbutton:active{
+    color: rgb(65, 210, 154);
+}
+/* .search{
+    margin-left: 1%;
+} */
+::-webkit-input-placeholder { /* WebKit browsers */
+    padding-left: 40%;
+}
+.searchbar{
+    width: 200px;
+    height: 20px;
+    background-color: rgb(237, 234, 234);
+    /* border: 1px solid black; */
+    font-size: small;
+    border-radius: 10px;
+    box-shadow: none;
+    padding-left: 5px;
+    /* justify-self: center;
+    align-self: center;
+    display: flex; */
+    /* margin-left: 20px; */
+}
+.searchbardiv{
+    margin-left: 30%;
+    margin-top: 2%;
+}
+.nonactive{
+    display: none;
+}
