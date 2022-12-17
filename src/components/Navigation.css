@@ -26,7 +26,7 @@
 .navbar{
     position: absolute;
     right: 10%;
-    margin-top: 2%;
+    /* margin-top: 2%; */
 }
 .navigator{
     display: flex;
@@ -64,6 +64,7 @@
     display: flex; */
     /* margin-left: 20px; */
 }
+
 .searchbardiv{
     margin-left: 30%;
     margin-top: 2%;
@@ -74,4 +75,69 @@
 .searchbar::-webkit-input-placeholder{
     text-align: center;
     padding-left: 0;
+}
+.more{
+    display: none;
+}
+@media screen and (max-width:1100px) {
+    .navbar{
+        display: none;
+        position: absolute;
+        /* background-color: #f1f1f1; */
+        /* min-width: 160px; */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        right: 5px;
+    }
+    .more{
+        display: block;
+        position: absolute;
+        right: 10px;
+        background-color: rgb(65, 210, 154);
+        color: white;
+        border: none;
+        padding: 5px;
+        width: 100px;
+    }
+    .navbar a:hover {
+        background-color: #ddd;
+    }
+
+    .dropdownnavbar:hover .navbar {
+        display: flex;
+        flex-direction: column;
+        right: 0;
+        margin-top: 26px;
+        width: 110px;
+    }
+    .Search{
+        margin: 0 auto;
+        margin-top: 5px;
+        margin-bottom: 3px;
+    }
+    .navbutton{
+        margin-right: 0;
+        margin-top: 5px;
+    }
+}
+@media screen and (max-width:800px) {
+    .searchbardiv{
+        margin-left: 25%;
+    }
+}
+@media screen and (max-width:640px) {
+    .searchbardiv{
+        margin-left: 20%;
+    }
+    .searchbar{
+        width: 180px;
+    }
+}
+@media screen and (max-width:510px) {
+    .searchbardiv{
+        margin-left: 10%;
+    }
+    .searchbar{
+        width: 150px;
+    }
 }
