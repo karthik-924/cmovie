@@ -18,7 +18,7 @@ const Mainpage = () => {
   },[])
   return (
     <div>
-      <Navigation/>
+      <Navigation present="Home"/>
       <h1>Mainpage</h1>
     </div>
   )

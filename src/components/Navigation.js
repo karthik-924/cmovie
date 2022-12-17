@@ -1,8 +1,11 @@
 import React from "react";
 import "./Navigation.css";
 import { BsSearch } from 'react-icons/bs'
-import {useState} from 'react'
-const Navigation = () => {
+import { useState } from 'react'
+import {useNavigate} from 'react-router-dom'
+const Navigation = (present) => {
+    console.log(present)
+    const navigate = useNavigate();
     const [active,setActive]=useState(true)
   return (
     <div>
@@ -14,13 +17,13 @@ const Navigation = () => {
           <div className="dot"></div>
               </div>
               <div className={active?"searchbardiv":"nonactive"}>
-                  <input type='text' placeholder="search" className="searchbar"/>
+                  <input type='text' placeholder="Search" className="searchbar"/>
         </div>
         <div className="navbar">
-          <button className="navbutton active">Home</button>
-          <button className="navbutton">Language</button>
-          <button className="navbutton">Genre</button>
-                  <button className="navbutton">Account</button>
+                  <button className={present.present==="Home"?"navbutton active":"navbutton"} onClick={()=>navigate("/main")}>Home</button>
+          <button className={present.present==="Language"?"navbutton active":"navbutton"} onClick={()=>navigate("/language")}>Language</button>
+          <button className={present.present==="Genre"?"navbutton active":"navbutton"} onClick={()=>navigate("/genre")}>Genre</button>
+                  <button className={present.present==="Account"?"navbutton active":"navbutton"} onClick={()=>navigate("/account")}>Account</button>
                   <BsSearch className="Search" onClick={()=>setActive(!active)}/>
         </div>
       </div>

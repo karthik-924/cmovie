@@ -49,9 +49,7 @@
 /* .search{
     margin-left: 1%;
 } */
-::-webkit-input-placeholder { /* WebKit browsers */
-    padding-left: 40%;
-}
+
 .searchbar{
     width: 200px;
     height: 20px;
@@ -72,4 +70,8 @@
 }
 .nonactive{
     display: none;
+}
+.searchbar::-webkit-input-placeholder{
+    text-align: center;
+    padding-left: 0;
 }
