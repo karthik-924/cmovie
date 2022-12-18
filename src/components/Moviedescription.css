@@ -1,0 +1,13 @@
+.descimage{
+    height: 170px;
+    width: 270px;
+    border-radius: 5px;
+}
+.descheader{
+    display: flex; 
+}
+.desctitle{
+    margin-left: 50px;
+    font-weight: 600;
+    margin-top: 0;
+}

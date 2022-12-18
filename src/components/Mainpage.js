@@ -28,6 +28,7 @@ const Mainpage = () => {
   }, []);
   return (
     <div>
+      {console.log(Movies)}
       <Navigation present="Home" />
       <div className="movieshow">
         {loading ? (
