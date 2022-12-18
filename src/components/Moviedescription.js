@@ -36,8 +36,10 @@ const Moviedescription = () => {
           <div style={{ marginTop: "40px", marginLeft: "50px", marginRight: "50px" }}>
               <div className='descheader'>
                   <img src={location.state.image.url} alt={id} className="descimage" />
-                  <div>
-                      <h2 className='desctitle'>{details.title.title}</h2>
+                  <div className='maindesc'>
+                          <h2 className='desctitle'>{details.title.title}</h2>
+                          <div className='genres'>{details.genres.map((genre) => <p className='moviegenre'>{genre}</p>)}</div>
+                          <p className='moviegenre' style={{marginTop:"0",marginBottom:"0"}}>Duration: 1:50hrs</p>
                   </div>
                   </div>
               </div>
