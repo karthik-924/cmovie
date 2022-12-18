@@ -1,0 +1,17 @@
+.movieimage{
+    height: 200px;
+    width: 300px;
+    border-radius: 10px;
+}
+.moviecontainer{
+    height: 300px;
+}
+.movietitle{
+    font-weight: 500;
+}
+.play{
+    background-color: white;
+    color: rgb(65, 210, 154);
+    border: none;
+    font-weight: bold;
+}

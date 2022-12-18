@@ -21,7 +21,7 @@ const Navigation = (present) => {
               </div>
               {/* <div className="dropdownbtn"> */}
               <div className="dropdownnavbar">
-                  <button className="more">More</button>
+                  <button className="more">Menu</button>
         <div className="navbar">
                   <button className={present.present==="Home"?"navbutton active":"navbutton"} onClick={()=>navigate("/main")}>Home</button>
           <button className={present.present==="Language"?"navbutton active":"navbutton"} onClick={()=>navigate("/language")}>Language</button>

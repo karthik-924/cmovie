@@ -1,7 +1,10 @@
 import React from 'react'
 import { useState, useEffect } from 'react';
+import Moviecard from './Moviecard';
 import Navigation from './Navigation';
+import './Mainpage.css'
 const Mainpage = () => {
+  const [Movies,setMovies]=useState([])
   useEffect(() => {
     const options = {
       method: 'GET',
@@ -13,13 +16,15 @@ const Mainpage = () => {
     
     fetch('https://imdb8.p.rapidapi.com/title/v2/find?title=game%20of&limit=20&paginationKey=1&sortArg=moviemeter%2Casc', options)
       .then(response => response.json())
-      .then(response => console.log(response))
+      .then(response => setMovies(response.results))
       .catch(err => console.error(err));
   },[])
   return (
     <div>
       <Navigation present="Home"/>
-      <h1>Mainpage</h1>
+      <div className='movieshow'>
+        {Movies.map((movie) => <Moviecard key={movie.id} details={movie}/>)}
+      </div>
     </div>
   )
 }
