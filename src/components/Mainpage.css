@@ -8,6 +8,21 @@
   justify-content: center;
   margin-top: 50px;
 }
+.seemore{
+    width: 130px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(65, 210, 154);
+    color: white;
+    align-self: center;
+}
+.viewbutton{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
 @media screen and (max-width:1300px) {
     .movieshow{
         grid-template-columns: 300px 300px;
