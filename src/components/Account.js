@@ -3,7 +3,8 @@ import Navigation from './Navigation'
 const Account = () => {
   return (
     <div>
-      <Navigation present="Account"/>
+      <Navigation present="Account" />
+      <h1>Not Yet Constructed</h1>
     </div>
   )
 }

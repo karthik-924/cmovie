@@ -3,7 +3,8 @@ import Navigation from './Navigation'
 const Genre = () => {
   return (
     <div>
-      <Navigation present="Genre"/>
+      <Navigation present="Genre" />
+      <h1>Not Yet Constructed</h1>
     </div>
   )
 }
