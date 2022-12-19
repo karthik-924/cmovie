@@ -14,6 +14,8 @@
 }
 .maindesc{
     margin-left: 50px;
+    position: relative;
+    width: 90%;
 }
 .genres{
     display: flex;
@@ -22,4 +24,34 @@
     margin-right: 10px;
     font-size: small;
     margin-bottom: 5px;
+}
+.watchbuttons{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.watchbutton{
+    height: 30px;
+    width: 120px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(38, 168, 118);
+    color: white;
+    margin-right: 30px;
+}
+.watchlater{
+    height: 30px;
+    width: 100px;
+    border-radius: 5px;
+    border: 2px solid rgb(65, 210, 154);
+    background-color: white;
+    color: rgb(65, 210, 154);
+}
+.movietext{
+    width: 80vw;
+    margin-top: 50px;
+    font-weight: 500;
+}
+.plotdesc{
+    margin-bottom: 30px;
 }

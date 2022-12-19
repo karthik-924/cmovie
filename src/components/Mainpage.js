@@ -12,7 +12,7 @@ const Mainpage = () => {
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "f5a6505831msh047caca82de1460p1f887fjsn1dfbd2ab0027",
+        "X-RapidAPI-Key": "32c5b48d93msh7dd5b54cf75d18dp14e869jsncf707e2882d2",
         "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
       },
     };
@@ -23,26 +23,23 @@ const Mainpage = () => {
     )
       .then((response) => response.json())
       .then((response) => setMovies(response.results))
-      .then(setLoading(false))
+      .then((response)=>setLoading(false))
       .catch((err) => console.error(err));
   }, []);
   return (
     <div>
       {console.log(Movies)}
       <Navigation present="Home" />
-      <div className="movieshow">
-        {loading ? (
-          <Loading/>
-        ) : (
-          Movies.slice(0, state * 9).map((movie) => (
-            <Moviecard key={movie.id} details={movie} />
-          ))
-        )}
-      </div>
-      <div className="viewbutton">
-        <button className="seemore" onClick={()=>setState(state+1)}>See more</button>
-      </div>
+      {loading ? <Loading />:<div className="movieshow">{Movies.slice(0, state * 9).map((movie) => (<Moviecard key={movie.id} details={movie} />))}</div>}
+      {loading ? "" :
+        <div className="viewbutton">
+          <button className="seemore" onClick={() => setState(state + 1)}>
+            See more
+          </button>
+        </div>
+      }
     </div>
+
   );
 };
 
