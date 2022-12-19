@@ -29,13 +29,13 @@ const Moviedescription = () => {
       .then((response) => setDetails(response))
       .then((response) => setLoading(false))
       .catch((err) => console.error(err));
-  }, []);
+  }, [id]);
   console.log(details);
   // console.log(details)
   console.log(details.plotSummary);
   return (
     <div>
-      <Navigation present="Home"/>
+      <Navigation present="Home" />
       {loading ? (
         <Loading />
       ) : (
@@ -71,37 +71,55 @@ const Moviedescription = () => {
           </div>
           <div className="movietext">
             {details.plotSummary !== undefined ? (
-              <div className="plotdesc">
-                <p>{details.plotOutline.text}</p>
-                <p>{details.plotSummary.text}</p>
-              </div>
+              details.plotOutline !== undefined ? (
+                <div className="plotdesc">
+                  <p>{details.plotOutline.text}</p>
+                  <p>{details.plotSummary.text}</p>
+                </div>
+              ) : (
+                <div className="plotdesc">
+                  <p>{details.plotSummary.text}</p>
+                </div>
+              )
             ) : (
               <div className="plotdesc">
                 <p>{details.plotOutline.text}</p>
               </div>
             )}
             {details.plotSummary !== undefined ? (
-              <div className="plotdesc">
-                <p>{details.plotOutline.text}</p>
-                <p>{details.plotSummary.text}</p>
-              </div>
+              details.plotOutline !== undefined ? (
+                <div className="plotdesc">
+                  <p>{details.plotOutline.text}</p>
+                  <p>{details.plotSummary.text}</p>
+                </div>
+              ) : (
+                <div className="plotdesc">
+                  <p>{details.plotSummary.text}</p>
+                </div>
+              )
             ) : (
               <div className="plotdesc">
                 <p>{details.plotOutline.text}</p>
               </div>
             )}
             {details.plotSummary !== undefined ? (
-              <div className="plotdesc">
-                <p>{details.plotOutline.text}</p>
-                <p>{details.plotSummary.text}</p>
-              </div>
+              details.plotOutline !== undefined ? (
+                <div className="plotdesc">
+                  <p>{details.plotOutline.text}</p>
+                  <p>{details.plotSummary.text}</p>
+                </div>
+              ) : (
+                <div className="plotdesc">
+                  <p>{details.plotSummary.text}</p>
+                </div>
+              )
             ) : (
               <div className="plotdesc">
                 <p>{details.plotOutline.text}</p>
               </div>
-                          )}
-                          <Moviesslider genre={details.genres} />
+            )}
           </div>
+          <Moviesslider genre={details.genres} />
         </div>
       )}
     </div>

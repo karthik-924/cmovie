@@ -4,7 +4,8 @@ import { useNavigate,useLocation } from "react-router-dom";
 const Moviecard = ({ details }) => {
     const location = useLocation();
     const navigate = useNavigate();
-  const { id,image, title } = details;
+  const { id, image, title } = details;
+  console.log(id)
   return (
     <div className="moviecontainer">
       <img src={image.url} alt={title} className="movieimage"></img>
