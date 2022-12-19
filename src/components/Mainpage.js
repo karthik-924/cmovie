@@ -18,7 +18,7 @@ const Mainpage = () => {
     };
 
     fetch(
-      "https://imdb8.p.rapidapi.com/title/v2/find?title=game%20of&titleType=movie&limit=20&paginationKey=1&sortArg=moviemeter%2Casc",
+      "https://imdb8.p.rapidapi.com/title/v2/find?title=a&titleType=movie&limit=20&paginationKey=1&sortArg=moviemeter%2Casc",
       options
     )
       .then((response) => response.json())
