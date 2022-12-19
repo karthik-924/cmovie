@@ -39,9 +39,7 @@ const Moviedescription = () => {
       {loading ? (
         <Loading />
       ) : (
-        <div
-          style={{ marginTop: "40px", marginLeft: "50px", marginRight: "50px" }}
-        >
+        <div className="description">
           <div className="descheader">
             <div>
               <img

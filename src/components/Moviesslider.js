@@ -37,7 +37,7 @@ const Moviesslider = ({ genre }) => {
   }, [genre]);
     return (
         <div className="similardiv">
-            <h3 className="showsheading">Similar shows</h3>
+            <h3 className="showsheading">Similar Movies</h3>
       {loading ? <Loading /> :<div className="similarmovies">{similar.map((movie) => (<Moviecard key={movie.id} details={movie} />))}</div> }
     </div>
   );

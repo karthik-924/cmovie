@@ -1,11 +1,10 @@
 .descimage{
-    height: 170px;
-    width: 270px;
+    height: 200px;
+    width: 300px;
     border-radius: 5px;
 }
 .descheader{
     display: flex; 
-    
 }
 .desctitle{
     font-weight: 600;
@@ -55,3 +54,55 @@
 .plotdesc{
     margin-bottom: 30px;
 }
+.description{
+    margin-top: 40px;
+     margin-left: 50px;
+      margin-right: 50px; 
+}
+@media screen and (max-width:700px) {
+    .descheader{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .maindesc{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 40px;
+        margin-left: 0;
+    }
+    .watchbuttons{
+        position: relative;
+        margin-top: 30px;
+    }
+    .descimage{
+        height: 200px;
+        width: 310px;
+    }
+    .description{
+        margin-top: 0;
+         margin-left: 0;
+          margin-right: 0; 
+    }
+    .movietext{
+        text-align: center;
+        width: auto;
+    }
+}
+/* @media screen and (max-width:540px) {
+    .watchbuttons{
+        left: 12%;
+    }
+}
+@media screen and (max-width:480px) {
+    .watchbuttons{
+        left: 7%;
+    }
+}
+@media screen and (max-width:420px) {
+    .watchbuttons{
+        left: 4%;
+    }
+} */

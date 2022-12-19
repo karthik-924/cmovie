@@ -3,14 +3,28 @@
     grid-template-columns: 300px 300px 300px 300px;
     grid-row: 300px;
     grid-column-gap: 40px;
-    grid-row-gap: 20px;
+    grid-row-gap: 40px;
     align-items: center;
     justify-content: center;
     margin-bottom: 100px;
+    margin-left: 0;
 }
 .showsheading{
-    color: rgb(65, 210, 154);
+    margin-bottom: 40px;
+    color: rgb(118, 233, 189);
 }
 .similardiv{
     margin-top: 100px;
+}
+@media screen and (max-width:1300px) {
+    .similarmovies{
+        grid-template-columns: 300px 300px;
+        grid-row: 300px 300px;
+    }
+}
+@media screen and (max-width:670px){
+    .similarmovies{
+        grid-template-columns: 300px;
+        grid-row: auto;
+    }
 }
