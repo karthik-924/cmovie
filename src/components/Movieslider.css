@@ -2,10 +2,10 @@
     display:grid;
     grid-template-columns: 300px 300px 300px 300px;
     grid-row: 300px;
-    grid-column-gap: 40px;
+    grid-column-gap: 60px;
     grid-row-gap: 40px;
-    align-items: center;
-    justify-content: center;
+    /* align-items: center;
+    justify-content: center; */
     margin-bottom: 100px;
     margin-left: 0;
 }
@@ -21,6 +21,8 @@
     .similarmovies{
         grid-template-columns: 300px 300px;
         grid-row: 300px 300px;
+        align-items: center;
+    justify-content: center;
     }
 }
 @media screen and (max-width:670px){

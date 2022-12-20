@@ -20,10 +20,11 @@ const Moviesslider = ({ genre }) => {
   const [loading, setLoading] = useState(true);
   console.log(url);
   useEffect(() => {
+    setLoading(true);
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "32c5b48d93msh7dd5b54cf75d18dp14e869jsncf707e2882d2",
+        "X-RapidAPI-Key": "ffa1aca1aamshb302b05cd644d80p13a733jsn5d022d3d43f6",
         "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
       },
     };
@@ -35,10 +36,22 @@ const Moviesslider = ({ genre }) => {
       .then((response) => setLoading(false))
       .catch((err) => console.error(err));
   }, [genre]);
-    return (
-        <div className="similardiv">
-            <h3 className="showsheading">Similar Movies</h3>
-      {loading ? <Loading /> :<div className="similarmovies">{similar.map((movie) => (<Moviecard key={movie.id} details={movie} />))}</div> }
+  return (
+    <div className="similardiv">
+      <h3 className="showsheading">Similar Movies</h3>
+      {loading ? (
+        <Loading />
+      ) : similar != undefined ? (
+        <div className="similarmovies">
+          {similar.map((movie) => (
+            <Moviecard key={movie.id} details={movie} />
+          ))}
+        </div>
+      ) : (
+        <div className="similarmovies">
+          <h2>No matches found</h2>
+        </div>
+      )}
     </div>
   );
 };

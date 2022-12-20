@@ -1,22 +1,24 @@
 import React from "react";
 import "./Moviedescription.css";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Navigation from "./Navigation";
 import { useEffect, useState } from "react";
 import Loading from "./Loading";
 import Moviesslider from "./Moviesslider";
+import Def from "../images/Def.jpg";
 const Moviedescription = () => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const location = useLocation();
   const [details, setDetails] = useState([]);
   const [loading, setLoading] = useState(true);
   console.log(location.state);
   const id = location.state.id.slice(7, -1);
   useEffect(() => {
+    setLoading(true);
     const options = {
       method: "GET",
       headers: {
-        "X-RapidAPI-Key": "32c5b48d93msh7dd5b54cf75d18dp14e869jsncf707e2882d2",
+        "X-RapidAPI-Key": "ffa1aca1aamshb302b05cd644d80p13a733jsn5d022d3d43f6",
         "X-RapidAPI-Host": "imdb8.p.rapidapi.com",
       },
     };
@@ -43,7 +45,7 @@ const Moviedescription = () => {
           <div className="descheader">
             <div>
               <img
-                src={location.state.image.url}
+                src={location.state.image.url || Def}
                 alt={id}
                 className="descimage"
               />
